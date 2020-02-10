@@ -57,7 +57,6 @@ Comme personne n'est parfait, il n'est pas exclu que cet examen contienne des co
 ## Partie 1: conception de l'application
 
 > ⏱️ 2 heures 30 minutes
-
 ---
 
 ### Etape 1. Définir les spécifications fonctionnelles
@@ -70,15 +69,15 @@ Comme personne n'est parfait, il n'est pas exclu que cet examen contienne des co
 
 - A combien de types d'utilisateurs le projet s'adresse-t-il? Nommez chacun de ces types.
 
-> _Ma réponse:_
+> _Ma réponse: 2 (auteurs et lecteurs)
 
 - Combien d'applications faudra-t-il créer et quel sera le type de chacun d'entre elle?
 
-> _Ma réponse:_
+> _Ma réponse: 2 (api pour le back et mobile pour le front)
 
 - Quelles sont les fonctionnalités principales du projet? Listez-les par ordre de priorité (de la plus importante à la moins importante).
 
-> _Ma réponse:_
+> _Ma réponse: avoir acces a une liste de livre, chaque livre a une liste de chapitres,livres trié par genre,  like sur les chapitres, paiement 
 
 #### 💻 Travail à réaliser
 
@@ -88,7 +87,7 @@ Inclure votre production dans le dépôt Git, ou le **lien de partage** du table
 
 > _Lien de partage de mon tableau Trello:_
 
----
+--- https://trello.com/b/NMO7uETx/ecf
 
 ### Etape 2. Maquetter l'application
 
@@ -99,11 +98,11 @@ Inclure votre production dans le dépôt Git, ou le **lien de partage** du table
 
 - Combien de pages sont-elles nécessaires, à votre avis, pour répondre aux spécifications fonctionnelles définies ci-dessus?
 
-> _Ma réponse:_
+> _Ma réponse:_3 (book list, chapter list, chapter )
 
 - A quoi le plan du site ressemblera-t-il? Quelle page permettra de passer à quelle autre?
 
-> _Ma réponse:_
+> _Ma réponse:_ ("/") = book list , ("/chapterList/") = chapter list, ("/chapterList/1/") = chapitre 1 
 
 #### 💻 Travail à réaliser
 
@@ -112,6 +111,12 @@ A l'aide de l'outil de votre choix (outil suggéré: https://wireframe.cc), réa
 Inclure vos productions dans le dépôt Git, dans un dossier **mockups**, ou le **lien de partage** de chacun de vos wireframes (attention, sur wireframe.cc, ne pas oublier de cliquer sur **Save**, sinon tous votre travail est perdu!).
 
 > _Liens de partage de mes wireframes:_
+
+  https://wireframe.cc/1judRc
+  
+  https://wireframe.cc/srAqK2
+  
+  https://wireframe.cc/RsaJ4p
 
 #### Bonus
 
@@ -129,15 +134,15 @@ Réaliser des maquettes (incluant couleurs, fontes, et autres éléments de desi
 
 - Choisiriez-vous plutôt une base de données de type SQL, ou NoSQL pour ce projet? Justifiez votre choix.
 
-> _Ma réponse:_
+> _Ma réponse: SQL car le noSQL est plus pour le bigdata et que le sql est suffisant pour ce projet
 
 - Combien d'entités sont-elles nécessaires pour ce projet, et que représenterait chacune d'entre elles? Quelles propriétés pourraient-elles avoir?
 
-> _Ma réponse:_
+> _Ma réponse: 3 ( type, book, chapter)
 
 - Quelles relations envisageriez-vous entre ces entités? Précisez pour chaque relation: One-to-one, One-to-many, Many-to-many, composition ou aggrégation.
 
-> _Ma réponse:_
+> _Ma réponse: une fk dans la table chapter (book-id) et en cascade (si je supprime un livre je supprime ses chapitres), une fk pour livre (type-id) en set null (si on supprime tout les genre d'un livre son genre devient null), chaptitre a livre = many to one, livre a genre/type = many to many
 
 #### 💻 Travail à réaliser
 
@@ -145,7 +150,7 @@ A l'aide de l'outil de votre choix (outil suggéré: [Lucidchart](https://www.lu
 
 Inclure votre production dans votre dépôt ou donner le **lien de partage** de votre fichier.
 
-> _Lien de partage de mon MCD:_
+> _Lien de partage de mon MCD:https://www.lucidchart.com/documents/edit/8f87c442-ca77-428d-bb2b-9a330d8a1556/0_0
 
 Puis, à l'aide de l'interface de votre choix (outil suggéré: PHPMyAdmin pour une base de données MySQL/MariaDB), créez le schéma de base de données (tables, colonnes...) nécessaire au bon fonctionnement du projet.
 
@@ -175,7 +180,7 @@ Ecrivez vous-mêmes le code nécessaire à la migration de votre schéma au lieu
 
 - Combien d'entités envisagez-vous de créer et pourquoi? Combien de contrôleurs envisagez-vous de créer et pourquoi?
 
-> _Ma réponse:_
+> _Ma réponse:_2 
 
 - Un CRUD suffira-t-il pour chacune des entités, ou y a-t-il des entités pour lesquelles il faudra définir de la logique spécifique?
 
@@ -203,7 +208,7 @@ Vous pouvez, pour ce faire, utiliser le squelette d'application existant dans le
 
 - Quelle technique allez-vous utiliser pour communiquer avec l'API?
 
-> _Ma réponse:_
+> _Ma réponse: axios 
 
 - Comptez-vous séparer l'affichage de la gestion des données? Pouvez-vous expliquer votre choix?
 
