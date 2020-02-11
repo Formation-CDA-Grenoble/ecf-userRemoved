@@ -77,8 +77,12 @@ Comme personne n'est parfait, il n'est pas exclu que cet examen contienne des co
 
 - Quelles sont les fonctionnalités principales du projet? Listez-les par ordre de priorité (de la plus importante à la moins importante).
 
-> _Ma réponse: avoir acces a une liste de livre, chaque livre a une liste de chapitres,livres trié par genre,  like sur les chapitres, paiement 
-
+> _Ma réponse:
+               liste des livres ( en tant que user j'ai besoins d'une page ' chapitre' me permettant de lire les chapitres)
+               lire un chapitre
+               liste des chapitres 
+               publier les contenue 
+               listes livres associés a une catégorie
 #### 💻 Travail à réaliser
 
 En se basant sur la demande client, rédiger les spécifications fonctionnelles de l'application à l'aide de l'outil de votre choix (outil suggéré: [Trello](https://www.trello.com)). Vous pouvez utiliser [ce tableau Trello](https://trello.com/b/wk1kciPI/dev-project) comme base de travail. Vous êtes libre de l'organisation de votre document, en revanche vos spécifications fonctionnelles doivent **au minimum** être triées par **couche** (application web front-end, application web back-end, application mobile...).
@@ -98,11 +102,11 @@ Inclure votre production dans le dépôt Git, ou le **lien de partage** du table
 
 - Combien de pages sont-elles nécessaires, à votre avis, pour répondre aux spécifications fonctionnelles définies ci-dessus?
 
-> _Ma réponse:_3 (book list, chapter list, chapter )
+> _Ma réponse:_4 page mobile 3 page web : 
 
 - A quoi le plan du site ressemblera-t-il? Quelle page permettra de passer à quelle autre?
 
-> _Ma réponse:_ ("/") = book list , ("/chapterList/") = chapter list, ("/chapterList/1/") = chapitre 1 
+> sur l'interface administrateur une barre navigation pour passer d'une page a lu'autre, sur utilisateir liste des livre en page d'acceuil, clic sur livre = va sur liste des chapitres du livre, lien d'un chapitre = page pour lire le chapitre 
 
 #### 💻 Travail à réaliser
 
@@ -121,6 +125,7 @@ Inclure vos productions dans le dépôt Git, dans un dossier **mockups**, ou le 
 #### Bonus
 
 Réaliser des maquettes (incluant couleurs, fontes, et autres éléments de design) à la place des _wireframes_.
+"    
 
 ---
 
@@ -134,15 +139,16 @@ Réaliser des maquettes (incluant couleurs, fontes, et autres éléments de desi
 
 - Choisiriez-vous plutôt une base de données de type SQL, ou NoSQL pour ce projet? Justifiez votre choix.
 
-> _Ma réponse: SQL car le noSQL est plus pour le bigdata et que le sql est suffisant pour ce projet
+> _Ma réponse: SQL les bdd sont structués 
 
 - Combien d'entités sont-elles nécessaires pour ce projet, et que représenterait chacune d'entre elles? Quelles propriétés pourraient-elles avoir?
 
-> _Ma réponse: 3 ( type, book, chapter)
+> _Ma réponse: 3 ( catégories, book, chapter)
 
 - Quelles relations envisageriez-vous entre ces entités? Précisez pour chaque relation: One-to-one, One-to-many, Many-to-many, composition ou aggrégation.
 
-> _Ma réponse: une fk dans la table chapter (book-id) et en cascade (si je supprime un livre je supprime ses chapitres), une fk pour livre (type-id) en set null (si on supprime tout les genre d'un livre son genre devient null), chaptitre a livre = many to one, livre a genre/type = many to many
+> entre chapitre et livre : one to many, composition ( chapitres font partie des livre donc si livre supprimé chapitre aussi)
+  entre livre et catégorie : many to many
 
 #### 💻 Travail à réaliser
 
