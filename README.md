@@ -69,11 +69,11 @@ Comme personne n'est parfait, il n'est pas exclu que cet examen contienne des co
 
 - A combien de types d'utilisateurs le projet s'adresse-t-il? Nommez chacun de ces types.
 
-> _Ma réponse: 2 (auteurs et lecteurs)
+> _Ma réponse: 2 (administrateurs et lecteurs)
 
 - Combien d'applications faudra-t-il créer et quel sera le type de chacun d'entre elle?
 
-> _Ma réponse: 2 (api pour le back et mobile pour le front)
+> _Ma réponse: 3 applications : une appli mobile pour lecteur, une application web pour administrateurs et une API
 
 - Quelles sont les fonctionnalités principales du projet? Listez-les par ordre de priorité (de la plus importante à la moins importante).
 
